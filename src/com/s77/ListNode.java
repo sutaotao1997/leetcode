@@ -6,8 +6,8 @@ package com.s77;
  */
 public class ListNode {
 
-    private int val;
-    private ListNode next;
+    public int val;
+    public ListNode next;
 
     public ListNode() {
     }
@@ -21,19 +21,15 @@ public class ListNode {
         this.next = next;
     }
 
-    public int getVal() {
-        return val;
+    public void print() {
+        ListNode t = this;
+        System.out.print("[");
+        System.out.print(t.val + ", ");
+        while (t.next != null) {
+            t = t.next;
+            System.out.print(t.val + ", ");
+        }
+        System.out.print("]");
     }
 
-    public void setVal(int val) {
-        this.val = val;
-    }
-
-    public ListNode getNext() {
-        return next;
-    }
-
-    public void setNext(ListNode next) {
-        this.next = next;
-    }
 }
